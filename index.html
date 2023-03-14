@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+
+     <br>
+     <input id="numeroA"> Número A </input>
+     <br>
+     <br>
+     <br>
+     <br>
+     <input id="numeroB"> Número B </input>
+     <br>
+     <br>
+     <br>
+     <br>
+     <button id="suma" onclick="suma()">SUMA(+)</button>
+     <button id="resta" onclick="resta()">RESTA(-)</button>
+     <button id="multiplicación" onclick="multiplicación()">MULTIPLICACION(*)</button>
+     <h1>Resultado: </h1>
+     <input id="resultado"></input>
+
+     <script>
+
+        console.log("Ejecutando código Javascript")
+
+        // const ValorA = document.getElementById("numeroA").value 
+
+        // console.log("Valor A =>", ValorA)
+
+        function suma (){
+            console.log("Iniciando suma");
+
+            const ValorA = document.getElementById("numeroA").value 
+            const ValorB = document.getElementById("numeroB").value 
+            let campoResultado = document.getElementById("resultado");
+
+
+            if(!ValorA || !ValorB){
+                campoResultado.value = "faltan datos";
+            }
+            if(ValorA && ValorB){
+                console.log("procesando resultado")
+                console.log("Valor A =>", ValorA)
+                console.log("Valor B =>", ValorB)
+                campoResultado.value = Number(ValorA)+ Number(ValorB);
+            }
+          
+
+            //  const Resultado = Number(ValorA)+ Number(ValorB);
+
+            //  console.log("Resultado =>", Resultado);
+
+            // let campoResultado = document.getElementById("resultadoSuma");
+
+            // campoResultado.value=Resultado
+
+        }
+
+        function resta(){
+            console.log("Iniciando resta")
+
+            const ValorA = document.getElementById("numeroA").value 
+            const ValorB = document.getElementById("numeroB").value 
+            let campoResultado = document.getElementById("resultado");
+
+            if(!ValorA || !ValorB){
+                campoResultado.value = "faltan datos";
+            }
+            if(ValorA && ValorB){
+                console.log("procesando resultado")
+                console.log("Valor A =>", ValorA)
+                console.log("Valor B =>", ValorB)
+                campoResultado.value = Number(ValorA)- Number(ValorB);
+            }
+
+        }
+
+        function multiplicación(){
+            console.log("Iniciando multiplicación")
+
+            const ValorA = document.getElementById("numeroA").value 
+            const ValorB = document.getElementById("numeroB").value 
+            let campoResultado = document.getElementById("resultado");
+
+            if(!ValorA || !ValorB){
+                campoResultado.value = "faltan datos";
+            }
+            if(ValorA && ValorB){
+                console.log("procesando resultado")
+                console.log("Valor A =>", ValorA)
+                console.log("Valor B =>", ValorB)
+                campoResultado.value = Number(ValorA)*Number(ValorB);
+            }
+
+        }
+
+     </script>
+
+
+</body>
+</html>
